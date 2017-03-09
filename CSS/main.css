@@ -1,0 +1,38 @@
+*{
+	outline: 1px solid red; 
+	
+}
+
+.menu{
+	float: right;
+}
+
+#tablero{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 461px;
+    height: 409px;
+	margin: 10px;
+}
+
+#tablero .box{
+	background: silver;
+	width: 153px;
+	cursor: pointer;
+	transition: all 300ms ease;
+	padding: 45px;
+}
+
+#tablero .box:hover{
+	background: gray;
+}
+
+#tablero .box i{
+	font-size: 40px;
+}
+
+
+#movimientos{
+	padding: 100px 0; 
+}
