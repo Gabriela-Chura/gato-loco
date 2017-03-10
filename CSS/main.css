@@ -36,3 +36,9 @@
 #movimientos{
 	padding: 100px 0; 
 }
+
+section{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
