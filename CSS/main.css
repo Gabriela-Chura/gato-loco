@@ -3,8 +3,45 @@
 	
 }
 
-.menu{
-	float: right;
+header
+{
+	position: relative;
+	z-index:100;
+}
+
+section
+{
+	background: rgba(255, 0, 0, 0.3);
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display: none;
+	opacity:0;
+}
+
+.visible
+{
+	opacity:1;
+	display: table;
+}
+
+.content
+{
+	background: rgba(0, 255, 0, 0.1);
+	display:table-cell;
+	vertical-align: middle;
+}
+
+
+#saludo
+{
+
+}
+#saludo h1
+{
+	margin-bottom:120px;
 }
 
 #tablero{
@@ -24,7 +61,7 @@
 	padding: 45px;
 }
 
-#tablero .box:hover{
+#tablero .box:hover {
 	background: gray;
 }
 
@@ -32,13 +69,25 @@
 	font-size: 40px;
 }
 
-
 #movimientos{
 	padding: 100px 0; 
 }
 
-section{
-	position: absolute;
-	width: 100%;
-	height: 100%;
+
+/*
+table
+{
+text-align: center;
+color: black;
 }
+ 
+
+ 
+td
+{
+border: 1px solid black;
+width:100px;
+height: 100px;
+font-size: 24px;
+text-align: center;
+}*/
