@@ -3,6 +3,10 @@
 	
 }
 
+#body{
+	background-color: #f5f0f0;
+}
+
 header
 {
 	position: relative;
@@ -11,13 +15,13 @@ header
 
 section
 {
-	background: rgba(255, 0, 0, 0.3);
-	position: absolute;
+	/*background: rgba(253, 224, 176, 0.18);*/
+	position: ;
 	width:100%;
 	height:100%;
 	top:0;
 	left:0;
-	display: none;
+
 	opacity:0;
 }
 
@@ -27,18 +31,21 @@ section
 	display: table;
 }
 
+.novisible
+{
+	opacity:0;
+	display: table;
+}
+
 .content
 {
-	background: rgba(0, 255, 0, 0.1);
 	display:table-cell;
 	vertical-align: middle;
+	padding: 120px 0; 
 }
 
 
-#saludo
-{
 
-}
 #saludo h1
 {
 	margin-bottom:120px;
@@ -54,7 +61,7 @@ section
 }
 
 #tablero .box{
-	background: silver;
+	background: #edefca;
 	width: 153px;
 	cursor: pointer;
 	transition: all 300ms ease;
@@ -62,7 +69,7 @@ section
 }
 
 #tablero .box:hover {
-	background: gray;
+	background: rgb(217, 181, 96);
 }
 
 #tablero .box i{

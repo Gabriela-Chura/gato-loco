@@ -10,7 +10,7 @@
 	<link rel="icon" type="image/png" href="image/cat-icon.png" sizes="20x20" />
 
 </head>
-<body>
+<body id="body" onload="inicio()">
 	<header>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -25,7 +25,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Inicio</a></li>
+					<li><a href="#" id="boton">Inicio</a></li>
 					<li><a href="#">Historial</a></li>
 				</ul>
 			</div>
@@ -54,11 +54,11 @@
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-6"> <h3>Ingrese el nombre del jugador 1</h3></div>
-		 	<div class="col-md-6">  <br> <input type="text"></div>
+		 	<div class="col-md-6">  <br> <input type="text" id="uno"></div>
 		</div>
 		<div class="row text-center">
 			<div class="col-md-6"> <h3>Ingrese el nombre del jugador 1</h3></div>
-		 	<div class="col-md-6">  <br> <input type="text"></div>
+		 	<div class="col-md-6">  <br> <input type="text" id="dos"></div>
 		</div>
 		<div class="row text-center">
 		<div class="boton"><button type="button" id="btn-nombres">¿Listos? ¡Ya! </button></div>
@@ -68,7 +68,7 @@
 </section>
 
 	<section id="juego">
-	<div class="content">
+	<div class="content1">
 	<div class="container">
 		<div class="row text-center">
 			<h3 style="margin:0;">Turno de jugador</h3>
@@ -77,15 +77,15 @@
 		<div class="row">
 			<div class="col-md-6 col-xs-12" style="padding:0;">
 				<div id="tablero">
-	<span class="box" data-field="1"><i class="icon-cancel"></i></span>
-	<span class="box" data-field="2"><i class="icon-cancel"></i></span>
-	<span class="box" data-field="3"><i class="icon-radio-unchecked"></i></span>
-	<span class="box" data-field="4"><i class="icon-radio-unchecked"></i></span>
-	<span class="box" data-field="5"><i class="icon-radio-unchecked"></i></span>
-	<span class="box" data-field="6"><i class="icon-cancel"></i></span>
-	<span class="box" data-field="7"><i class="icon-cancel"></i></span>
-	<span class="box" data-field="8"><i class="icon-cancel"></i></span>
-	<span class="box" data-field="9"><i class="icon-cancel"></i></span>
+	<span class="box" id="c1" data-field="1"></span>
+	<span class="box" id="c2" data-field="2"></span>
+	<span class="box" id="c3" data-field="3"></span>
+	<span class="box" id="c4" data-field="4"></span>
+	<span class="box" id="c5" data-field="5"></span>
+	<span class="box" id="c6" data-field="6"></span>
+	<span class="box" id="c7" data-field="7"></span>
+	<span class="box" id="c8" data-field="8"></span>
+	<span class="box" id="c9" data-field="9"></span>
 				</div>
 			</div>
 		
@@ -100,6 +100,7 @@
 	</div>
    </div>
     </section>
+    
     <!--
 			<table>
 			    <tr>
@@ -121,7 +122,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="JS/main.js"></script>
 	<script src="JS/index.js"></script>
+
 </body>
 </html>
 

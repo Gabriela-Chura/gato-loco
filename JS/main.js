@@ -3,7 +3,7 @@
 var turno = 1; 
 var queTurno; 
 var arregloGato = new Array(9); 
-var celdas = document.getElementsByClassName('gato');
+var celdas = document.getElementsByClassName('box');
 
 
 
@@ -20,39 +20,39 @@ function ganaJugador(letra){
         )
         {
             alert ('jugador'+letra+'gana'); 
-            window.location.reload();
+            //window.location.reload();
         }
 }
 
 
 function gato (evento){ 
     var celda = evento.target;
-    var idcelda = evento.target.id; 
+    var idCelda = evento.target.id;
     var posicionAMarcar = idCelda [1]-1;
     
     queTurno = turno%2; 
     
     if(queTurno!=0){
-        celda.innerHTML="x"; 
-        celda.style.background ="red"; 
+        celda.innerHTML='<i class="icon-cancel"></i>'; 
+        celda.style.background ="#edefca"; 
         arregloGato[posicionAMarcar] = "X";
         ganaJugador("X"); 
     } else if (queTurno==0){
-        celda.innerHTML="O";
-        celda.style.background ="aqua"; 
+        celda.innerHTML='<i class="icon-radio-unchecked"></i>';
+        celda.style.background =" rgb(217, 181, 96)"; 
         arregloGato[posicionAMarcar] = "O";
         ganaJugador("O");
     }
     
     if (turno == 9) {
         alert('empate'); 
-        window.location.reload; 
+        //window.location.reload; 
     } else {
         turno++; 
     }
 }
 
-function init(){
+function inicio(){
     var n = 0 ; 
     
     while(n < celdas.length){
