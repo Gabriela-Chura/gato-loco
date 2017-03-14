@@ -4,7 +4,8 @@ var turno = 1;
 var queTurno; 
 var arregloGato = new Array(9); 
 var celdas = document.getElementsByClassName('box');
-
+var name1 =localStorage.getItem('name1');
+var name2 =localStorage.getItem('name2');
 
 
 function ganaJugador(letra){
@@ -19,8 +20,9 @@ function ganaJugador(letra){
         (arregloGato[2]== letra && arregloGato[4]== letra && arregloGato[6]== letra )
         )
         {
-            alert ('jugador'+letra+'gana'); 
-            //window.location.reload();
+             
+			alert ('jugador'+letra+'gana'); 
+            
         }
 }
 
@@ -29,18 +31,22 @@ function gato (evento){
     var celda = evento.target;
     var idCelda = evento.target.id;
     var posicionAMarcar = idCelda [1]-1;
-    
+    var name1 =localStorage.getItem('name1');
+	var name2 =localStorage.getItem('name2');
+	
     queTurno = turno%2; 
     
     if(queTurno!=0){
         celda.innerHTML='<i class="icon-cancel"></i>'; 
         celda.style.background ="#edefca"; 
         arregloGato[posicionAMarcar] = "X";
+		var jugador = $('#jugador').html('Turno de:'+name1); 
         ganaJugador("X"); 
     } else if (queTurno==0){
         celda.innerHTML='<i class="icon-radio-unchecked"></i>';
-        celda.style.background =" rgb(217, 181, 96)"; 
+        celda.style.background ="rgb(217, 181, 96)"; 
         arregloGato[posicionAMarcar] = "O";
+		var jugador = $('#jugador').html('Turno de:'+name2);
         ganaJugador("O");
     }
     
@@ -59,5 +65,8 @@ function inicio(){
         celdas[n].addEventListener('click', gato); 
         n++; 
     }
+	
+	
+		
 }
 
