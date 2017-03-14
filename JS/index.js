@@ -67,10 +67,10 @@ function onClickBtnNombre() {
 	}else{
 		var jugadorUno = $('#uno').val();
 		localStorage.setItem('name1', jugadorUno);
-		alert(jugadorUno);
+		
 		var jugadorDos = $('#dos').val();
 		localStorage.setItem('name2', jugadorDos);
-		alert(jugadorDos);
+		
 		
 		gotoSection('juego');
 	} 
