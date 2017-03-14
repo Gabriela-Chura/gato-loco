@@ -27,6 +27,7 @@ function ganaJugador(letra){
 }
 
 
+
 function gato (evento){ 
     var celda = evento.target;
     var idCelda = evento.target.id;
@@ -41,7 +42,7 @@ function gato (evento){
         celda.style.background ="#edefca"; 
         arregloGato[posicionAMarcar] = "X";
 		var jugador = $('#jugador').html('Turno de:'+name1); 
-        ganaJugador("X"); 
+		ganaJugador("X"); 
     } else if (queTurno==0){
         celda.innerHTML='<i class="icon-radio-unchecked"></i>';
         celda.style.background ="rgb(217, 181, 96)"; 
@@ -57,6 +58,8 @@ function gato (evento){
         turno++; 
     }
 }
+
+
 
 function inicio(){
     var n = 0 ; 
