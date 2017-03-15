@@ -45,7 +45,7 @@ function onClickBtnComentar(){
 
 function enviarComentario(_idGame,_name,_content){
 	$.ajax({
-		url: 'https://test-ta.herokuapp.com/games'+_idGame+'/comments',
+		url: 'https://test-ta.herokuapp.com/games/'+_idGame+'/comments',
 		type:'POST',
 		data: {
 				comment:{
@@ -94,7 +94,7 @@ function onClickBtn(){
 
 function getHistorial() {
 	$.ajax({
-		url: 'https://test-ta.herokuapp.com/games'
+		url: 'https://test-ta.herokuapp.com/games/'
 	}).done(function (_data) {
 		dibujarHistorial(_data);
 	});
@@ -102,7 +102,7 @@ function getHistorial() {
 
 function getSingleGame(_idGame){
 	$.ajax({
-		url: 'https://test-ta.herokuapp.com/games'+_idGame,
+		url: 'https://test-ta.herokuapp.com/games/'+_idGame,
 		type: 'GET'
 	}).done(function (_data){
 		console.log(_data);
@@ -124,7 +124,7 @@ function dibujarHistorial(_datos) {
 
 function getComentarios(_idGame){
 	$.ajax({
-		url: 'https://test-ta.herokuapp.com/games'+_idGame+'/comments',
+		url: 'https://test-ta.herokuapp.com/games/'+_idGame+'/comments',
 		type: 'GET'
 	}).done(function (_data){
 		console.log(_data);
