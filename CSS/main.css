@@ -1,10 +1,12 @@
 *{
-	outline: 1px solid red; 
-	
+	/*outline: 1px solid red; */
+	font-family: 'Gloria Hallelujah', cursive, sans-serif;
 }
 
 #body{
-	background-color: #f5f0f0;
+	background-color: #f7edcb;
+	background-image: url(../image/huellitas.png);
+	
 }
 
 header
@@ -74,21 +76,50 @@ section
 	padding: 100px 0; 
 }
 
-
-/*
-table
-{
-text-align: center;
-color: black;
+h1 {
+  font-size: 3em;
+  color: #796161;
+  text-transform: uppercase;
 }
- 
 
- 
-td
-{
-border: 1px solid black;
-width:100px;
-height: 100px;
-font-size: 24px;
-text-align: center;
-}*/
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.navbar-default {
+    background-color: rgb(169, 144, 100);
+    border-color: #a2835b;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+}
+
+.w-M {
+  font-size: 1em;
+}
+.br-0 {
+  border-radius: 0px;
+}
+.stl-1-blue {
+  background-color: transparent;
+  border: 2px double #c9a74a;
+  color: #dba01c;
+  transition-duration: .4s;
+}
+.stl-1-blue:hover{  
+  background-color: rgb(217, 181, 96);
+;
+  color: white;
+}
+.stl-1-blue:active{  
+  background-color: rgb(217, 182, 65);
+  color: #fdf1ac;
+}
