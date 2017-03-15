@@ -116,7 +116,7 @@ function dibujarHistorial(_datos) {
 	for (var i in _datos) {
 		console.log(_datos[i].winner_player);
 
-		var html = '<li data-idgame="'+ _datos[i].id +'" class="list-group-item">' + _datos[i].winner_player + ' le gano a '+ _datos[i].loser_player +' en ' + _datos[i].number_of_turns_to_win + ' movimientos <button class="btn">Comentar</button></li>';
+		var html = '<li data-idgame="'+ _datos[i].id +'" class="list-group-item">' + _datos[i].winner_player + ' le gano a '+ _datos[i].loser_player +' en ' + _datos[i].number_of_turns_to_win + ' movimientos <button class="btn w-M br-0 stl-1-blue">Comentar</button></li>';
 		lista.append(html);
 	}
 }
